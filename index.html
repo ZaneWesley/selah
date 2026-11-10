@@ -4,20 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Selah | A journal that pauses with you</title>
-<meta name="description" content="Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="description" content="Selah is a private journal and friend that pauses with you. Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.">
 <meta name="theme-color" content="#F8F6F2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121614" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Selah">
-<meta property="og:title" content="Selah | A journal that pauses with you"><meta property="og:description" content="Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Selah | A journal that pauses with you"><meta name="twitter:description" content="Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23678069'/%3E%3Cpath d='M44 18C26 19 17 30 17 46c16 0 26-10 27-28zM17 46l14-14' fill='none' stroke='%23D9B45A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://chatselah.netlify.app/">
-<meta property="og:url" content="https://chatselah.netlify.app/">
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "Selah", "description": "Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.", "inLanguage": "en"}, {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Selah", "alternateName": "סלה", "applicationCategory": "LifestyleApplication", "operatingSystem": "Web, iOS, Android", "description": "Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours."}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Selah?", "acceptedAnswer": {"@type": "Answer", "text": "Selah is a private journaling app with an AI friend. You can write reflections, talk things through, and over time it learns how you think and speak so it can be a good friend."}}, {"@type": "Question", "name": "What does “Selah” mean?", "acceptedAnswer": {"@type": "Answer", "text": "It is a Hebrew word found in the Psalms and in Habakkuk, usually read as a call to pause and consider what was just said. To intentionally take time to reflect."}}, {"@type": "Question", "name": "Who can read my journal?", "acceptedAnswer": {"@type": "Answer", "text": "Only you. Your reflections and chats are stored under your signed-in account. The full privacy policy explains how your information is handled."}}, {"@type": "Question", "name": "What does Selah remember, and can I change it?", "acceptedAnswer": {"@type": "Answer", "text": "Selah keeps short memories about you and private notes on your personality and writing style. All of it is visible in Settings, where you can correct or delete it. Deleted memories are not learned again."}}, {"@type": "Question", "name": "Will it bring up things I would rather not revisit?", "acceptedAnswer": {"@type": "Answer", "text": "Not on its own. Prompts, “pick up where you left off” and Feed cards are filtered so heavy topics like grief, illness or crisis are not resurfaced unprompted. In a chat, you decide what to talk about."}}, {"@type": "Question", "name": "Is Selah a replacement for therapy?", "acceptedAnswer": {"@type": "Answer", "text": "No. Selah is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, call or text 988. If you are in immediate danger, call 911 or your local emergency number."}}, {"@type": "Question", "name": "Can I delete my journal or account?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. In Settings you can see and delete anything Selah remembers about you, export everything you have written, or delete your account, which erases your entries, chats and all profile-related data."}}, {"@type": "Question", "name": "Where can I use Selah?", "acceptedAnswer": {"@type": "Answer", "text": "Selah works in your web browser. Soon it will be available as a mobile app for iPhone and Android, with your reflections and chats in sync across all devices."}}, {"@type": "Question", "name": "Why are there no streaks?", "acceptedAnswer": {"@type": "Answer", "text": "By design. Selah is meant to be a place to pause, not another thing to keep up with."}}]}]</script>
 <style>
 /* Tokens mirror theme.js (LIGHT / DARK) so this page looks like the app. */
 :root{
@@ -67,12 +59,14 @@ nav.pill .in{pointer-events:auto;display:flex;gap:2px;align-items:center;padding
 nav.pill .in::-webkit-scrollbar{display:none}
 nav.pill a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
 nav.pill a:hover{color:var(--text);background:color-mix(in srgb,var(--sage) 14%,transparent)}
+nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color:var(--text)}
 nav.pill a.logo{font-family:var(--serif);font-size:18px;color:var(--text);padding:6px 14px}
 
 /* Hero */
 .hero{padding:88px 0 56px;text-align:center}
+.brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--serif);font-size:clamp(30px,4vw,38px);font-weight:600;color:var(--sage)}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
-.hero h1{font-size:clamp(40px,7vw,72px);margin:18px auto 0;max-width:15ch}
+.hero h1{font-size:clamp(40px,7vw,72px);margin:14px auto 0;max-width:15ch}
 .hero h1 em{font-style:italic;font-weight:400;color:var(--sage)}
 .hero p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:56ch;margin:22px auto 0}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
@@ -85,6 +79,8 @@ nav.pill a.logo{font-family:var(--serif);font-size:18px;color:var(--text);paddin
 .meaning b{font-style:normal;color:var(--text)}
 
 section{padding:56px 0}
+.promo{display:block;max-width:560px;text-align:center;text-decoration:none;font-size:14px;line-height:1.5;color:var(--text);padding:10px 18px;border-radius:var(--r-lg);background:color-mix(in srgb,var(--sage) 12%,transparent);border:1px solid color-mix(in srgb,var(--sage) 30%,transparent)}
+.promo span{color:var(--muted)}.promo em{font-style:normal;font-weight:700;color:var(--sage)}
 .sec-head{text-align:center;margin-bottom:34px}
 .sec-head h2{font-size:clamp(28px,4vw,40px)}
 .sec-head p{color:var(--muted);max-width:58ch;margin:12px auto 0}
@@ -103,13 +99,9 @@ section{padding:56px 0}
 .ico{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;font-size:21px;color:var(--c);background:color-mix(in srgb,var(--c) 15%,transparent)}
 .sage{--c:var(--sage)} .rose{--c:var(--rose)} .sky{--c:var(--sky)}
 .verb .num{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--c)}
-.verb h3{margin-top:8px}
+.vhead{display:flex;align-items:center;gap:12px;margin:10px 0 8px}
+.vhead h3{margin:0}
 
-/* Mood strip */
-.moods{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
-.mood{width:92px;padding:14px 0 10px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}
-.mood svg{width:38px;height:38px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;margin:0 auto}
-.mood span{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:6px}
 
 /* Steps */
 .steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
@@ -155,26 +147,14 @@ footer a{margin:0 8px}
   .hero{padding:64px 0 36px} section{padding:40px 0} th,td{padding:12px 14px} td:first-child{width:auto}
   .g2{grid-template-columns:1fr}
 }
-
-.cta .btn{cursor:pointer}
-nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color:var(--sage);margin-left:4px}
-.verb .ico{margin-top:12px}
-.bul{list-style:none;padding:0;margin:8px 0 0}
-.bul li{position:relative;padding-left:16px;margin:8px 0}
-.bul li::before{content:"";position:absolute;left:2px;top:.78em;width:4px;height:4px;border-radius:50%;background:var(--muted);opacity:.7}
-.sub-link{display:block;text-align:center;margin-top:16px;font-weight:700;font-size:15px}
-.center{text-align:center}
-.nf{min-height:100vh;display:grid;place-items:center;padding:24px}
-.nf .card{max-width:460px;width:100%;text-align:center;padding:38px 28px}
-.nf .ico{margin:0 auto;width:52px;height:52px;border-radius:18px;font-size:24px}
-.nf .code{font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--sage);margin-top:18px}
-.nf h1{font-size:32px;margin-top:8px}
-.nf p{color:var(--muted);font-size:15px;margin-top:12px}
-.nf .def{font-family:var(--serif);font-style:italic;margin-top:18px}
-.nf .cta{margin-top:26px}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Selah","description":"Selah is a private journal and friend that pauses with you. Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.","inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Selah","alternateName":"סלה","applicationCategory":"LifestyleApplication","operatingSystem":"Web, iOS, Android","description":"Selah is a private journal and friend that pauses with you. Write freely, or talk it through with a friend who notices and gets to know you. Your pages stay yours.","image":"/og-image.png","inLanguage":"en","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Paid","price":"7","priceCurrency":"USD"}],"featureList":["A journal that pauses with you","A friend that gets to know you","Weekly recap and monthly insights","Voice dictation","See, correct and delete everything Selah remembers","Export or delete all of your data"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Selah?","acceptedAnswer":{"@type":"Answer","text":"Selah is a private journaling app with an AI friend. You can write reflections, talk things through, and over time it learns how you think and speak so it can be a good friend."}},{"@type":"Question","name":"What does \"Selah\" mean?","acceptedAnswer":{"@type":"Answer","text":"It is a Hebrew word found in the Psalms and in Habakkuk, usually read as a call to pause and consider what was just said. To intentionally take time to reflect."}},{"@type":"Question","name":"Who can read my journal?","acceptedAnswer":{"@type":"Answer","text":"Only you. Your reflections and chats are stored under your signed-in account. The full privacy policy explains how your information is handled."}},{"@type":"Question","name":"What does Selah remember, and can I change it?","acceptedAnswer":{"@type":"Answer","text":"Selah keeps short memories about you and private notes on your personality and writing style. All of it is visible in Settings, where you can correct or delete it. Deleted memories are not learned again."}},{"@type":"Question","name":"Will it bring up things I would rather not revisit?","acceptedAnswer":{"@type":"Answer","text":"Not on its own. Prompts, “pick up where you left off” and Feed cards are filtered so heavy topics like grief, illness or crisis are not resurfaced unprompted. In a chat, you decide what to talk about."}},{"@type":"Question","name":"Is Selah a replacement for therapy?","acceptedAnswer":{"@type":"Answer","text":"No. Selah is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, call or text 988. If you are in immediate danger, call 911 or your local emergency number."}},{"@type":"Question","name":"Can I delete my journal or account?","acceptedAnswer":{"@type":"Answer","text":"Yes. In Settings you can see and delete anything Selah remembers about you, export everything you have written, or delete your account, which erases your entries, chats and all profile-related data."}},{"@type":"Question","name":"How much does Selah cost?","acceptedAnswer":{"@type":"Answer","text":"Selah is free to start, with a daily allowance of chat messages. Paid is $7 a month and gives you about five times the daily chat allowance, plus voice chat. You can cancel any time. The pricing page has the full comparison."}},{"@type":"Question","name":"Where can I use Selah?","acceptedAnswer":{"@type":"Answer","text":"Selah works in your web browser. Soon it will be available as a mobile app for iPhone and Android, with your reflections and chats in sync across all devices."}},{"@type":"Question","name":"Why are there no streaks?","acceptedAnswer":{"@type":"Answer","text":"By design. Selah is meant to be a place to pause, not another thing to keep up with."}}]}</script>
 </head>
 <body>
+
+<!-- Icon set (the same drawings as components/Icon.jsx, 24px grid) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19l-4 1zM14.5 6.5l3 3"/></symbol>
   <symbol id="chat" viewBox="0 0 24 24"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-8L6.5 20v-3.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z"/></symbol>
@@ -194,93 +174,135 @@ nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color
   <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
   <symbol id="mail" viewBox="0 0 24 24"><path d="M4.5 6h15a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM4 7.5l8 6 8-6"/></symbol>
 </svg>
+
 <div class="bg" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></div>
-<a class="skip" href="#how" style="position:absolute;left:-999px">Skip to content</a>
-<nav class="pill" aria-label="Page sections"><div class="in">
-  <a class="logo" href="#top">Selah</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a><a class="login" href="https://chatselah.netlify.app/auth/email">Log in</a>
-</div></nav>
+
+<nav class="pill" aria-label="Page sections">
+  <div class="in">
+    <a class="logo" href="#top">Selah</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://chatselah.netlify.app/pricing">Pricing</a>
+    <a class="login" href="https://chatselah.netlify.app/auth/email">Log in</a>
+  </div>
+</nav>
 
 <header class="wrap hero" id="top">
-  <span class="eyebrow"><svg class="i" style="font-size:16px"><use href="#sparkle"/></svg> A private AI journal</span>
+  <span class="brand"><svg class="i" style="font-size:20px"><use href="#sparkle"/></svg> Selah</span>
   <h1>A journal that <em>pauses</em> with you.</h1>
   <p class="lead">Write freely, or talk it through with a friend who notices and gets to know you.</p>
-  <div class="cta"><a class="btn primary" href="https://chatselah.netlify.app/auth/email"><svg class="i"><use href="#pencil"/></svg> Start writing</a><a class="btn ghost" href="#how">See how it works</a></div>
+  <div class="cta">
+    <a class="btn primary" href="https://chatselah.netlify.app/auth/email">Start writing</a>
+    <a class="btn ghost" href="#how">See how it works</a>
+  </div>
   <p class="meaning"><b>Selah</b> is a Hebrew word from the Psalms, usually read as a call to pause and consider what was just said. To intentionally take time to reflect.</p>
 </header>
 
 <main>
-<section id="how"><div class="wrap">
-  <div class="sec-head"><h2>Reflect. Talk. Notice. Remember.</h2><p>“No pressure. No audience. Just a place to pause.”</p></div>
-  <div class="grid g4">
-    <div class="card verb sage"><span class="num">01</span><div class="ico"><svg class="i"><use href="#pencil"/></svg></div><h3>Reflect</h3><p>A blank page to write. No save button, no formatting, no streaks. Dictate when you&#x27;re tired, add a photo when the day needs one, and leave whenever you like.</p></div>
-    <div class="card verb rose"><span class="num">02</span><div class="ico"><svg class="i"><use href="#chat"/></svg></div><h3>Talk</h3><p>A friend who is always there to listen. Just talk about life. With “Just listen” switched on, they only listen and won&#x27;t try to fix anything.</p></div>
-    <div class="card verb sky"><span class="num">03</span><div class="ico"><svg class="i"><use href="#leaf"/></svg></div><h3>Notice</h3><p>A friend who pays attention. They notice when you are down, stressed or doing well, and help you see the patterns in your weeks and months.</p></div>
-    <div class="card verb sage"><span class="num">04</span><div class="ico"><svg class="i"><use href="#bookmark"/></svg></div><h3>Remember</h3><p>A friend who remembers what you said, wrote and enjoy. You can see every memory, correct it, and delete it whenever you like.</p></div>
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Reflect. Talk. Notice. Remember.</h2>
+      <p>“No pressure. No audience. Just a place to pause.”</p>
+    </div>
+    <div class="grid g4" role="list">
+      <div class="card verb sage" role="listitem"><span class="num">01</span><div class="vhead"><div class="ico "><svg class="i"><use href="#pencil"/></svg></div><h3>Reflect</h3></div><p>A blank page to write. No save button, no formatting, no streaks. Dictate when you're tired, add a photo when the day needs one, and leave whenever you like.</p></div>
+      <div class="card verb rose" role="listitem"><span class="num">02</span><div class="vhead"><div class="ico "><svg class="i"><use href="#chat"/></svg></div><h3>Talk</h3></div><p>A friend who is always there to listen. Just talk about life. With “Just listen” switched on, they only listen and won't try to fix anything.</p></div>
+      <div class="card verb sky" role="listitem"><span class="num">03</span><div class="vhead"><div class="ico "><svg class="i"><use href="#leaf"/></svg></div><h3>Notice</h3></div><p>A friend who pays attention. They notice when you are down, stressed or doing well, and help you see the patterns in your weeks and months.</p></div>
+      <div class="card verb sage" role="listitem"><span class="num">04</span><div class="vhead"><div class="ico "><svg class="i"><use href="#bookmark"/></svg></div><h3>Remember</h3></div><p>A friend who remembers what you said, wrote and enjoy. You can see every memory, correct it, and delete it whenever you like.</p></div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section id="features"><div class="wrap">
-  <div class="sec-head"><h2>What's inside</h2><p>A quick look at what you can do in Selah.</p></div>
-  <div class="grid g2">
-    <div class="card sage"><div class="ico"><svg class="i"><use href="#pencil"/></svg></div><h3>Writing</h3><ul class="bul"><li><b>Autosaves</b> as you type, so it feels like a notebook</li><li><b>Dictate</b> with the mic, or add photos (kept on your device)</li><li><b>Start from a prompt</b> when you don&#x27;t know what to say</li><li><b>Talk about it</b> turns an entry into a conversation</li></ul></div>
-    <div class="card rose"><div class="ico"><svg class="i"><use href="#chat"/></svg></div><h3>Talking</h3><ul class="bul"><li><b>Talk it through</b> is not just an AI, it&#x27;s your friend</li><li><b>Just listen</b> mode: no advice, calmer blue background</li><li><b>Voice chat</b>: speak and hear replies hands-free</li><li><b>Rename chats</b> so you can find and continue them later</li><li><b>Crisis support</b> is provided when there is a risk of harm</li></ul></div>
-    <div class="card sky"><div class="ico"><svg class="i"><use href="#sun"/></svg></div><h3>Today</h3><ul class="bul"><li><b>Mood check-in</b> with one tap</li><li><b>Pick up where you left off</b> with your latest page or chat</li><li><b>Picking up on</b>: personal starters for writing or talking</li></ul></div>
-    <div class="card sage"><div class="ico"><svg class="i"><use href="#book"/></svg></div><h3>Journal</h3><ul class="bul"><li><b>Pin 5 favorites</b> at the top</li><li><b>Delete anything</b> you don&#x27;t want to remember</li></ul></div>
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What's inside</h2>
+      <p>A quick look at what you can do in Selah.</p>
+    </div>
+    <div style="display:flex;justify-content:center;margin:-10px 0 24px"><a class="promo" href="https://chatselah.netlify.app/pricing"><b>Free to start.</b> <span>Paid is $7 per month for about 5x the daily chat, plus voice chat.</span> <em>See pricing →</em></a></div>
+    <div class="grid g2">
+      <div class="card sage"><div class="ico "><svg class="i"><use href="#pencil"/></svg></div><h3>Writing</h3>
+        <ul>
+          <li><b>Autosaves</b> as you type, so it feels like a notebook</li>
+          <li><b>Dictate</b> with the mic, or add photos (kept on your device)</li>
+          <li><b>Start from a prompt</b> when you don't know what to say</li>
+          <li><b>Talk about it</b> turns an entry into a conversation</li>
+        </ul></div>
+      <div class="card rose"><div class="ico "><svg class="i"><use href="#chat"/></svg></div><h3>Talking</h3>
+        <ul>
+          <li><b>Talk it through</b> is not just an AI, it's your friend</li>
+          <li><b>Just listen</b> mode: no advice, calmer blue background</li>
+          <li><b>Voice chat</b> on the Paid plan: speak and hear replies hands-free</li>
+          <li><b>Rename chats</b> so you can find and continue them later</li>
+          <li><b>Crisis support</b> is provided when there is a risk of harm</li>
+        </ul></div>
+      <div class="card sky"><div class="ico "><svg class="i"><use href="#sun"/></svg></div><h3>Today</h3>
+        <ul>
+          <li><b>One-tap mood check-in</b> with no words required</li>
+          <li><b>Pick up where you left off</b> with your latest page or chat</li>
+          <li><b>Picking up on</b>: personal starters for writing or talking</li>
+        </ul></div>
+      <div class="card sage"><div class="ico "><svg class="i"><use href="#book"/></svg></div><h3>Journal</h3>
+        <ul>
+          <li><b>Pin 5 favorites</b> at the top</li>
+          <li><b>Delete anything</b> you don't want to remember</li>
+        </ul></div>
+    </div>
   </div>
-  <div style="height:34px"></div>
-  <div class="sec-head" style="margin-bottom:18px"><h3 style="font-size:24px">One-tap mood check-ins</h3><p>A quick check-in with no words required</p></div>
-  <div class="moods" role="img" aria-label="Five mood faces from Rough to Great">
-    <div class="mood" style="color:#C4534E"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M8 10.1l2.5-1M16 10.1l-2.5-1"/><circle cx="9.4" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="14.6" cy="12" r=".9" fill="currentColor" stroke="none"/><path d="M8.4 16.8c1-1.5 2.3-2.2 3.6-2.2s2.6.7 3.6 2.2"/></svg><span>Rough</span></div>
-    <div class="mood" style="color:var(--rose)"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="9.4" cy="10.4" r=".95" fill="currentColor" stroke="none"/><circle cx="14.6" cy="10.4" r=".95" fill="currentColor" stroke="none"/><path d="M9 15.9c.9-.6 1.9-.9 3-.9s2.1.3 3 .9"/></svg><span>Low</span></div>
-    <div class="mood" style="color:var(--muted)"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="9.4" cy="10.4" r=".95" fill="currentColor" stroke="none"/><circle cx="14.6" cy="10.4" r=".95" fill="currentColor" stroke="none"/><path d="M9 15.4h6"/></svg><span>Okay</span></div>
-    <div class="mood" style="color:var(--sage)"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="9.4" cy="10.4" r=".95" fill="currentColor" stroke="none"/><circle cx="14.6" cy="10.4" r=".95" fill="currentColor" stroke="none"/><path d="M8.6 14.2c1 1.3 2.2 1.9 3.4 1.9s2.4-.6 3.4-1.9"/></svg><span>Good</span></div>
-    <div class="mood" style="color:#D9B45A"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M8.3 10.4c.4-.8 1.8-.8 2.2 0M13.5 10.4c.4-.8 1.8-.8 2.2 0"/><path d="M7.9 13.6h8.2c-.6 2.5-2.1 3.8-4.1 3.8s-3.5-1.3-4.1-3.8z"/></svg><span>Great</span></div>
-  </div>
-</div></section>
+</section>
 
-<section id="privacy"><div class="wrap">
-  <div class="sec-head"><h2>Private, and yours to keep or erase</h2><p>Your reflections and chats are stored under your own sign-in, and only you can see them.</p></div>
-  <div class="grid g4">
-    <div class="card sage"><div class="ico"><svg class="i"><use href="#user"/></svg></div><h3>Always private</h3><p>Your reflections and chats are stored under your sign-in, and only you can see them. There is no public profile and nothing is shown to other people.</p></div>
-    <div class="card rose"><div class="ico"><svg class="i"><use href="#mail"/></svg></div><h3>No passwords</h3><p>You sign in with a link sent to your email. Selah never leaks a password because it never asks for one.</p></div>
-    <div class="card sky"><div class="ico"><svg class="i"><use href="#heart"/></svg></div><h3>Nothing sold</h3><p>Selah sends the relevant parts of your conversation to an AI model. Nothing is sold, and there are no ads. Just a friend who listens.</p></div>
-    <div class="card sage"><div class="ico"><svg class="i"><use href="#download"/></svg></div><h3>Yours to keep or erase</h3><p>Everything is yours. Delete your entries or chats at any time or delete your account and every entry, chat and memory goes with it.</p></div>
+<!-- PRIVACY -->
+<section id="privacy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Private, and yours to keep or erase</h2>
+      <p>Your reflections and chats are stored under your own sign-in, and only you can see them.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card sage"><div class="ico "><svg class="i"><use href="#user"/></svg></div><h3>Always private</h3><p>Your reflections and chats are stored under your sign-in, and only you can see them. There is no public profile and nothing is shown to other people.</p></div>
+      <div class="card rose"><div class="ico "><svg class="i"><use href="#mail"/></svg></div><h3>No passwords</h3><p>You sign in with a 6-digit code sent to your email. Selah never leaks a password because it never asks for one.</p></div>
+      <div class="card sky"><div class="ico "><svg class="i"><use href="#heart"/></svg></div><h3>Nothing sold</h3><p>Selah sends the relevant parts of your conversation to an AI model. Nothing is sold, and there are no ads. Just a friend who listens.</p></div>
+      <div class="card sage"><div class="ico "><svg class="i"><use href="#download"/></svg></div><h3>Yours to keep or erase</h3><p>Everything is yours. Delete your entries or chats at any time or delete your account and every entry, chat and memory goes with it.</p></div>
+    </div>
+    <p style="text-align:center;margin-top:14px"><a href="https://chatselah.netlify.app/privacy" style="font-weight:700">Read the full privacy policy →</a></p>
+    <div class="notice" style="margin-top:28px">
+      <div class="ico "><svg class="i"><use href="#info"/></svg></div>
+      <div>
+        <h3>Selah is not therapy</h3>
+        <p>It is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, <b>call or text 988</b>. If you are in immediate danger, call 911 or your local emergency number. Hotlines worldwide: <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>.</p>
+      </div>
+    </div>
   </div>
-  <a class="sub-link" href="https://chatselah.netlify.app/privacy">Read the full privacy policy →</a>
-  <div style="height:22px"></div>
-  <div class="notice">
-    <div class="ico"><svg class="i"><use href="#info"/></svg></div>
-    <div><h3>Selah is not therapy</h3>
-    <p>It is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, <b>call or text 988</b>. If you are in immediate danger, call 911 or your local emergency number. Hotlines worldwide: <a href="https://findahelpline.com" rel="noopener">findahelpline.com</a>.</p></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="sec-head"><h2>Questions</h2></div>
+    <details><summary>What is Selah?</summary><div class="body">Selah is a private journaling app with an AI friend. You can write reflections, talk things through, and over time it learns how you think and speak so it can be a good friend.</div></details>
+    <details><summary>What does “Selah” mean?</summary><div class="body">It is a Hebrew word found in the Psalms and in Habakkuk, usually read as a call to pause and consider what was just said. To intentionally take time to reflect.</div></details>
+    <details><summary>Who can read my journal?</summary><div class="body">Only you. Your reflections and chats are stored under your signed-in account. The full privacy policy explains how your information is handled.</div></details>
+    <details><summary>What does Selah remember, and can I change it?</summary><div class="body">Selah keeps short memories about you and private notes on your personality and writing style. All of it is visible in Settings, where you can correct or delete it. Deleted memories are not learned again.</div></details>
+    <details><summary>Will it bring up things I would rather not revisit?</summary><div class="body">Not on its own. Prompts, “pick up where you left off” and Feed cards are filtered so heavy topics like grief, illness or crisis are not resurfaced unprompted. In a chat, you decide what to talk about.</div></details>
+    <details><summary>Is Selah a replacement for therapy?</summary><div class="body">No. Selah is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, call or text 988. If you are in immediate danger, call 911 or your local emergency number.</div></details>
+    <details><summary>Can I delete my journal or account?</summary><div class="body">Yes. In Settings you can see and delete anything Selah remembers about you, export everything you have written, or delete your account, which erases your entries, chats and all profile-related data.</div></details>
+    <details><summary>How much does Selah cost?</summary><div class="body">Selah is free to start, with a daily allowance of chat messages. Paid is $7 a month and gives you about five times the daily chat allowance, plus voice chat. You can cancel any time. The pricing page has the full comparison.</div></details>
+    <details><summary>Where can I use Selah?</summary><div class="body">Selah works in your web browser. Soon it will be available as a mobile app for iPhone and Android, with your reflections and chats in sync across all devices.</div></details>
+    <details><summary>Why are there no streaks?</summary><div class="body">By design. Selah is meant to be a place to pause, not another thing to keep up with.</div></details>
   </div>
-</div></section>
-
-<section id="faq"><div class="wrap" style="max-width:760px">
-  <div class="sec-head"><h2>Questions</h2></div>
-  <details><summary>What is Selah?</summary><div class="body">Selah is a private journaling app with an AI friend. You can write reflections, talk things through, and over time it learns how you think and speak so it can be a good friend.</div></details>
-  <details><summary>What does “Selah” mean?</summary><div class="body">It is a Hebrew word found in the Psalms and in Habakkuk, usually read as a call to pause and consider what was just said. To intentionally take time to reflect.</div></details>
-  <details><summary>Who can read my journal?</summary><div class="body">Only you. Your reflections and chats are stored under your signed-in account. The full privacy policy explains how your information is handled.</div></details>
-  <details><summary>What does Selah remember, and can I change it?</summary><div class="body">Selah keeps short memories about you and private notes on your personality and writing style. All of it is visible in Settings, where you can correct or delete it. Deleted memories are not learned again.</div></details>
-  <details><summary>Will it bring up things I would rather not revisit?</summary><div class="body">Not on its own. Prompts, “pick up where you left off” and Feed cards are filtered so heavy topics like grief, illness or crisis are not resurfaced unprompted. In a chat, you decide what to talk about.</div></details>
-  <details><summary>Is Selah a replacement for therapy?</summary><div class="body">No. Selah is a tool for reflection, not a therapist, a medical service or a crisis line. If you are in the United States and in crisis, call or text 988. If you are in immediate danger, call 911 or your local emergency number.</div></details>
-  <details><summary>Can I delete my journal or account?</summary><div class="body">Yes. In Settings you can see and delete anything Selah remembers about you, export everything you have written, or delete your account, which erases your entries, chats and all profile-related data.</div></details>
-  <details><summary>Where can I use Selah?</summary><div class="body">Selah works in your web browser. Soon it will be available as a mobile app for iPhone and Android, with your reflections and chats in sync across all devices.</div></details>
-  <details><summary>Why are there no streaks?</summary><div class="body">By design. Selah is meant to be a place to pause, not another thing to keep up with.</div></details>
-</div></section>
-
-<section style="padding-top:8px"><div class="wrap center">
-  <h2 style="font-size:clamp(28px,4vw,40px)">Take a minute.</h2>
-  <p style="color:var(--muted);margin:12px 0 24px">Nothing needs fixing today. Just start writing.</p>
-  <div class="cta" style="margin-top:0"><a class="btn primary" href="https://chatselah.netlify.app/auth/email"><svg class="i"><use href="#pencil"/></svg> Start writing</a></div>
-</div></section>
+</section>
 </main>
 
-<footer><div class="wrap">
-  <div class="logo">Selah</div>
-  <p style="margin-top:6px">The private AI journal that pauses with you.</p>
-  <p style="margin-top:16px"><a href="https://chatselah.netlify.app/privacy">Privacy</a><a href="https://chatselah.netlify.app/auth/email">Log in</a><a href="#top">Back to top</a></p>
-  <p style="margin-top:16px">© <span id="yr">2026</span> Selah</p>
-</div></footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<footer>
+  <div class="wrap">
+    <div class="logo">Selah</div>
+    <p style="margin-top:6px">A journal that pauses with you.</p>
+    <p style="margin-top:16px"><a href="https://chatselah.netlify.app/pricing">Pricing</a><a href="https://chatselah.netlify.app/privacy">Privacy</a><a href="https://chatselah.netlify.app/auth/email">Log in</a></p>
+    <p style="margin-top:16px">© 2026 Selah</p>
+  </div>
+</footer>
 </body>
 </html>
