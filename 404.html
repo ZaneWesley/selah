@@ -4,14 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | Selah</title>
-<meta name="description" content="This page took a pause.">
-<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="This page took a pause. Head back to Selah.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#F8F6F2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121614" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Selah">
-<meta property="og:title" content="Page not found | Selah"><meta property="og:description" content="This page took a pause.">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Page not found | Selah"><meta name="twitter:description" content="This page took a pause.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23678069'/%3E%3Cpath d='M44 18C26 19 17 30 17 46c16 0 26-10 27-28zM17 46l14-14' fill='none' stroke='%23D9B45A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
@@ -64,12 +60,14 @@ nav.pill .in{pointer-events:auto;display:flex;gap:2px;align-items:center;padding
 nav.pill .in::-webkit-scrollbar{display:none}
 nav.pill a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
 nav.pill a:hover{color:var(--text);background:color-mix(in srgb,var(--sage) 14%,transparent)}
+nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color:var(--text)}
 nav.pill a.logo{font-family:var(--serif);font-size:18px;color:var(--text);padding:6px 14px}
 
 /* Hero */
 .hero{padding:88px 0 56px;text-align:center}
+.brand{display:inline-flex;align-items:center;gap:8px;font-family:var(--serif);font-size:clamp(30px,4vw,38px);font-weight:600;color:var(--sage)}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
-.hero h1{font-size:clamp(40px,7vw,72px);margin:18px auto 0;max-width:15ch}
+.hero h1{font-size:clamp(40px,7vw,72px);margin:14px auto 0;max-width:15ch}
 .hero h1 em{font-style:italic;font-weight:400;color:var(--sage)}
 .hero p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:56ch;margin:22px auto 0}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
@@ -82,6 +80,8 @@ nav.pill a.logo{font-family:var(--serif);font-size:18px;color:var(--text);paddin
 .meaning b{font-style:normal;color:var(--text)}
 
 section{padding:56px 0}
+.promo{display:block;max-width:560px;text-align:center;text-decoration:none;font-size:14px;line-height:1.5;color:var(--text);padding:10px 18px;border-radius:var(--r-lg);background:color-mix(in srgb,var(--sage) 12%,transparent);border:1px solid color-mix(in srgb,var(--sage) 30%,transparent)}
+.promo span{color:var(--muted)}.promo em{font-style:normal;font-weight:700;color:var(--sage)}
 .sec-head{text-align:center;margin-bottom:34px}
 .sec-head h2{font-size:clamp(28px,4vw,40px)}
 .sec-head p{color:var(--muted);max-width:58ch;margin:12px auto 0}
@@ -100,13 +100,9 @@ section{padding:56px 0}
 .ico{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;font-size:21px;color:var(--c);background:color-mix(in srgb,var(--c) 15%,transparent)}
 .sage{--c:var(--sage)} .rose{--c:var(--rose)} .sky{--c:var(--sky)}
 .verb .num{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--c)}
-.verb h3{margin-top:8px}
+.vhead{display:flex;align-items:center;gap:12px;margin:10px 0 8px}
+.vhead h3{margin:0}
 
-/* Mood strip */
-.moods{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
-.mood{width:92px;padding:14px 0 10px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}
-.mood svg{width:38px;height:38px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;margin:0 auto}
-.mood span{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:6px}
 
 /* Steps */
 .steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
@@ -153,22 +149,15 @@ footer a{margin:0 8px}
   .g2{grid-template-columns:1fr}
 }
 
-.cta .btn{cursor:pointer}
-nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color:var(--sage);margin-left:4px}
-.verb .ico{margin-top:12px}
-.bul{list-style:none;padding:0;margin:8px 0 0}
-.bul li{position:relative;padding-left:16px;margin:8px 0}
-.bul li::before{content:"";position:absolute;left:2px;top:.78em;width:4px;height:4px;border-radius:50%;background:var(--muted);opacity:.7}
-.sub-link{display:block;text-align:center;margin-top:16px;font-weight:700;font-size:15px}
-.center{text-align:center}
-.nf{min-height:100vh;display:grid;place-items:center;padding:24px}
-.nf .card{max-width:460px;width:100%;text-align:center;padding:38px 28px}
-.nf .ico{margin:0 auto;width:52px;height:52px;border-radius:18px;font-size:24px}
+body{min-height:100vh;display:grid;place-items:center;padding:24px}
+.nf{width:100%;max-width:460px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px 28px}
+.nf .ico{margin:0 auto}
 .nf .code{font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--sage);margin-top:18px}
-.nf h1{font-size:32px;margin-top:8px}
-.nf p{color:var(--muted);font-size:15px;margin-top:12px}
-.nf .def{font-family:var(--serif);font-style:italic;margin-top:18px}
-.nf .cta{margin-top:26px}
+.nf h1{font-size:clamp(30px,6vw,34px);margin-top:8px}
+.nf p{color:var(--muted);margin-top:12px}
+.nf .def{font-family:var(--serif);font-style:italic;font-size:15px;margin-top:18px}
+.nf .def i{font-style:normal}
+.nf .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
 </style>
 </head>
 <body>
@@ -189,16 +178,20 @@ nav.pill a.login{background:color-mix(in srgb,var(--sage) 16%,transparent);color
   <symbol id="volume" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4v-5zM15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
   <symbol id="calendar" viewBox="0 0 24 24"><path d="M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM4 10.5h16M8.5 3.5V7M15.5 3.5V7"/></symbol>
   <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
-  <symbol id="mail" viewBox="0 0 24 24"><path d="M4.5 6h15a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM4 7.5l8 6 8-6"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
 </svg>
 <div class="bg" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></div>
-<main class="nf"><div class="card">
-  <div class="ico sage" style="color:var(--sage);background:color-mix(in srgb,var(--sage) 15%,transparent)"><svg class="i"><use href="#leaf"/></svg></div>
+
+<main class="nf" role="main">
+  <div class="ico sage"><svg class="i"><use href="#leaf"/></svg></div>
   <div class="code">404</div>
   <h1>This page took a pause.</h1>
   <p>We couldn't find what you were looking for. It may have moved, or the link may be mistyped.</p>
-  <p class="def">sel·ah <span style="font-style:normal">(noun)</span> a pause; a moment to stop and consider.</p>
-  <div class="cta"><a class="btn primary" href="/">Back to Selah</a><a class="btn ghost" href="https://chatselah.netlify.app/privacy">Privacy</a></div>
-</div></main>
+  <p class="def">sel·ah <i>(noun)</i> a pause; a moment to stop and consider.</p>
+  <div class="row">
+    <a class="btn primary" href="/">Back to Selah</a>
+    <a class="btn ghost" href="/privacy">Privacy</a>
+  </div>
+</main>
 </body>
 </html>
